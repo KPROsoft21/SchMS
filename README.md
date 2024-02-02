@@ -1,6 +1,6 @@
 # School Management System
 
-![Uploading Screenshot 2024-02-02 at 10.13.54 PM.png…]()
+<img width="1498" alt="ss" src="https://github.com/KPROsoft21/SchMS/assets/99348571/8d3467e9-477a-481c-9a79-f7bdbd4b8d29">
 
 Current features
 ----------------
