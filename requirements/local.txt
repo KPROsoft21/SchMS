@@ -1,6 +1,8 @@
 -r base.txt
 
 psycopg2-binary==2.9.5  # https://github.com/psycopg/psycopg2
+django-environ
+dj-database-url
 
 # Code quality
 # ------------------------------------------------------------------------------
