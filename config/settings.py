@@ -16,6 +16,12 @@ from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+import environ
+
+env = environ.Env()
+
+environ.Env.read_env()
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -118,6 +124,9 @@ ASGI_APPLICATION = "config.asgi.application"
 # -----------------------------
 # NOTE: Some model fields may not work on sqlite db,
 # so consider using postgresql instead
+
+
+'''
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -128,6 +137,14 @@ DATABASES = {
         "PORT": config("DB_PORT", default=5432),
     }
 }
+'''
+
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.parse(env('DATABASE_URL'))
+}
+
 
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
