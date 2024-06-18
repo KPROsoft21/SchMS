@@ -48,7 +48,7 @@ Current features
 - Clone the repo with
 
 ```bash
-git clone https://github.com/adilmohak/django-lms.git
+git clone https://github.com/KPROsoft21/SchMS.git
 ```
 
 - Create and activate a python virtual environment
